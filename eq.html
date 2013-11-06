@@ -1,0 +1,30 @@
+<html>
+<head>
+<!-- You need to insert jQuery like this -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- And after jQuery eq.js -->
+<script src="./eq.js"></script>
+</head>
+<body>
+  <!-- The EQ-Script is looking for elements with data-eq attribute. The value of data-eq is the id to get the EQ-controls in javascript and the only thing that is mandantory.
+  
+    Optional you can specify:
+    - how many rows the eq sould have with data-rows
+    - on how many bands it works with data-levels
+    - witch bpm it sould emulate with data-bpm
+    - whitch colors should be used as a comma seperated list of valid css-color from top to bottom (it will be filled automaticaly with the last color value) for:
+      - on: data-colors
+      - off: data-hide-colors
+      
+    Please scale the height and width of the container!
+  
+   -->
+  <div style="height: 100px; width: 200px;" data-eq="sample" data-hide-colors="#cccccc,#ddd,#eee" data-colors="#F00,#FF0,#0F0" data-rows="15" data-levels="25" data-bpm="130"></div>
+  <button onclick="EQ.ids.sample.start();">Start</button>
+  <button onclick="EQ.ids.sample.pause();">Pause</button>
+  <button onclick="EQ.ids.sample.stop();">Stop</button>
+  <!-- You can control the EQs by selecting them trough EQ.ids.{data-eq value} and run one of the control actions on it (start, stop, play) like you see above -->
+</body>
+
+
+</html>
